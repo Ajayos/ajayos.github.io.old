@@ -4,9 +4,10 @@ import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 import reportWebVitals from "./reportWebVitals";
-// import HelmetProvider_ from "./contexts/HelmetContext";
+// eslint-disable-all-lines
+import HelmetProvider_ from "./contexts/HelmetContext";
 // import AuthProvider from "./contexts/AuthContext";
-// import SocketProvider from "./contexts/SocketContext";
+import SocketProvider from "./contexts/SocketContext";
 // import ThemeModelProvider from "./contexts/ThemeModeContext";
 import ScrollToTop from "./ScrollToTop";
 import Router from "./App";
@@ -16,8 +17,8 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<HelmetProvider>
-				{/* <HelmetProvider_> */}
-					{/* <SocketProvider> */}
+				<HelmetProvider_>
+					<SocketProvider>
 						{/* <AuthProvider> */}
 							{/* <ThemeModelProvider> */}
 								<ScrollToTop>
@@ -30,8 +31,8 @@ root.render(
 								</ScrollToTop>
 							{/* </ThemeModelProvider> */}
 						{/* </AuthProvider> */}
-					{/* </SocketProvider> */}
-				{/* </HelmetProvider_> */}
+					</SocketProvider>
+				</HelmetProvider_>
 			</HelmetProvider>
 		</BrowserRouter>
 	</React.StrictMode>

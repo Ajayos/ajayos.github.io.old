@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 export const HelmetContext = createContext("");
@@ -29,15 +29,15 @@ export default function HelmetProvider({ children }) {
 	}, []);
 
 	return (
-		<helmetContext.Provider value={{ setTitle, setDescription, setIcon }}>
+		<HelmetContext.Provider value={{ setTitle, setDescription, setIcon }}>
 			<>
 				<Helmet>
-					<title>{`${focus ? " " + title : " Come Back :) | "}`}</title>
+					<title>{`${focus ? " " + title : " Come Back :) "}`}</title>
 					<meta name='description' content={description} />
 					<link rel='icon' href={icon} />
 				</Helmet>
 				{children}
 			</>
-		</helmetContext.Provider>
+		</HelmetContext.Provider>
 	);
 }

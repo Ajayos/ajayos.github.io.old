@@ -1,4 +1,7 @@
+import React from "react";
+
 export default function App() {
+  console.log("hi")
   return (
     <div className="App">
       <h1>Hello </h1>
