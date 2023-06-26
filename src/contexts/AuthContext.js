@@ -19,16 +19,8 @@ export default function AuthProvider({ children }) {
 	const [user, setUser] = useState({});
 	const [MyToken, setMyToken] = useState("");
 	const [access, setAccess] = useState(false);
-	const [books, setBooks] = useState({});
 	const [error, setError] = useState(false);
 	
-	const [adminHomeData, setAdminHomeData] = useState({
-		users: 0,
-		books: 0,
-		rbooks: 0,
-		online: 0,
-	});
-
 	useEffect(() => {
 		const myToken = getToken();
 		if (myToken) {
