@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
 import reportWebVitals from "./reportWebVitals";
 // eslint-disable-all-lines
-import HelmetProvider_ from "./contexts/HelmetContext";
+import HelmetProviderContexts from "./contexts/HelmetContext";
 // import AuthProvider from "./contexts/AuthContext";
 import SocketProvider from "./contexts/SocketContext";
 // import ThemeModelProvider from "./contexts/ThemeModeContext";
@@ -17,7 +17,7 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<HelmetProvider>
-				<HelmetProvider_>
+				<HelmetProviderContexts>
 					<SocketProvider>
 						{/* <AuthProvider> */}
 							{/* <ThemeModelProvider> */}
@@ -32,7 +32,7 @@ root.render(
 							{/* </ThemeModelProvider> */}
 						{/* </AuthProvider> */}
 					</SocketProvider>
-				</HelmetProvider_>
+				</HelmetProviderContexts>
 			</HelmetProvider>
 		</BrowserRouter>
 	</React.StrictMode>
