@@ -1,21 +1,19 @@
 import { Navigate, useRoutes } from "react-router-dom";
 // import Load from "../components/Load";
-import useAuth  from "../hooks/useAuth";
-
-// Layouts
-const Layout = Load(() => import("./Pages/Layouts/Layout"));
 
 
 export default function Router() {
-  const { isAuthenticated, access } = useAuth();
+  //const { isAuthenticated, access } = useAuth();
+  const isAuthenticated = false;
+  const access = false;
 
   const routes = useRoutes([
     { path: "login", element: <h1> hi </h1> },
-    ...(isAuthenticated && !access
+    ...(!access
       ? [
           {
             path: "/",
-            element: <Layout />,
+            //element: <Layout />,
             children: [
               { element: <Navigate to="/home" />, index: true },
               { path: "home", element: <h1>user router </h1> },
@@ -27,7 +25,7 @@ export default function Router() {
       ? [
           {
             path: "/",
-            element: <Layout />,
+            //element: <Layout />,
             children: [
               { element: <Navigate to="/home" />, index: true },
               { path: "home", element: <h1>Admin router </h1> },
