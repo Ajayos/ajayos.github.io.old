@@ -1,7 +1,9 @@
 import { Navigate, useRoutes } from "react-router-dom";
 // import Load from "../components/Load";
 
-
+// Layout
+//Home
+import HomeLayout from "./Pages/Layout/Home/index"
 export default function Router() {
   //const { isAuthenticated, access } = useAuth();
   const isAuthenticated = false;
@@ -13,7 +15,7 @@ export default function Router() {
       ? [
           {
             path: "/",
-            //element: <Layout />,
+            element: <HomeLayout />,
             children: [
               { element: <Navigate to="/home" />, index: true },
               { path: "home", element: <h1>user router </h1> },
