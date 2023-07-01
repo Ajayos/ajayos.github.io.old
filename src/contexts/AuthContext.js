@@ -7,14 +7,14 @@ import { useState, createContext, useEffect } from "react";
 // 	logout,
 // } from "../utils/handleAuth";
 // import API from "../utils/api";
-import { useNavigate } from "react-router-dom";
-import Toast from "../Toast";
 
 export const AuthContext = createContext({});
 
 export default function AuthProvider({ children }) {
   // const { enqueueSnackbar } = useSnackbar();
+  // eslint-disable-next-line
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // eslint-disable-next-line
   const [user, setUser] = useState({
     name: "Ajay o s",
     email: "ajayos@gmail.com",
@@ -22,8 +22,11 @@ export default function AuthProvider({ children }) {
     pic: "https://github.com/Ajayos.png",
     online: true,
   });
+  // eslint-disable-next-line
   const [MyToken, setMyToken] = useState("");
+  // eslint-disable-next-line
   const [access, setAccess] = useState(false);
+  // eslint-disable-next-line
   const [error, setError] = useState(false);
 
   // useEffect(() => {

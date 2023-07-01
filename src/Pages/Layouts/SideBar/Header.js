@@ -32,8 +32,9 @@ export default function Header() {
     } else {
       setIs(false);
     }
-  });
+  }, [isAuthenticated, user]);
 
+  // eslint-disable-next-line
   const StyledBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       backgroundColor: isUser.online ? "green" : "transparent",
