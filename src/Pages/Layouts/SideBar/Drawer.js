@@ -4,10 +4,7 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
-  Sidebar,
-  SubMenu,
 } from "react-pro-sidebar";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 import colors from "../../../Theme/colors";
@@ -20,7 +17,6 @@ export default function DrawerPart() {
   const theme = useTheme();
   const color = colors(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const NAV_WIDTH = 280;
 
   useEffect(() => {
     setIsCollapsed(open ? true : false);

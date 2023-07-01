@@ -1,13 +1,12 @@
 import { Box, Divider, Typography, useTheme } from "@mui/material";
 import { MenuItem, SubMenu } from "react-pro-sidebar";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import colors from "../../../Theme/colors";
 import Header from "./Header";
 
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import PersonPinIcon from "@mui/icons-material/PersonPin";
 import AppsIcon from "@mui/icons-material/Apps";
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
@@ -15,10 +14,11 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import { useState } from "react";
 
 export default function Inside() {
+  // eslint-disable-next-line
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
-  const location = useLocation();
-  const [imageInside, setImageInside] = useState(undefined);
+  // const location = useLocation();
+  // const [imageInside, setImageInside] = useState(undefined);
 
   const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();

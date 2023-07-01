@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { IconButton, useTheme } from "@mui/material";
+import { useEffect, useState } from "react";
+import { IconButton } from "@mui/material";
 import useAuth from "../../../hooks/useAuth";
 import LoginIcon from "@mui/icons-material/Login";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";

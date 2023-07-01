@@ -3,10 +3,7 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
-  Sidebar,
-  SubMenu,
 } from "react-pro-sidebar";
-import { Link, useLocation } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Box, IconButton, useTheme } from "@mui/material";
 import colors from "../../../Theme/colors";

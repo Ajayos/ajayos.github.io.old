@@ -31,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "push": "git add . && git commit -m \"👨‍💻CODE BY 🕊️★⃝AJAY O S©️🧚‍♂️ \"  && git push"
+    "push": "git add . && git commit -m \"👨‍💻CODE BY 🕊️★⃝AJAY O S©️🧚 \"  && git push"
   },
   "eslintConfig": {
     "extends": [

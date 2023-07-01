@@ -38,6 +38,7 @@ export default function SideBarProvider({ children }) {
         drawer,
         setDrawer,
         Collapse,
+        isDrawer,
         contents,
         setContents,
       }}
