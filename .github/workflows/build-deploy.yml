@@ -26,7 +26,10 @@ jobs:
 
       - name: Copy all data from backup folder to build folder
         run: cp -R ./backup/* ./build
-
+      
+      - name: Make 404 as home
+        run: cp -R ./build/index.html ./build/404.html
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
